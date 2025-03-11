@@ -4,7 +4,10 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.hmdp.dto.LoginFormDTO;
 import com.hmdp.dto.Result;
 import com.hmdp.entity.User;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
+
+import java.net.http.HttpRequest;
 
 
 /**
@@ -25,4 +28,5 @@ public interface IUserService extends IService<User> {
 
     Result signCount();
 
+    Result logout(HttpServletRequest request);
 }
